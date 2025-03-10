@@ -109,6 +109,10 @@
   content: none;
 }
 
+.icon-arrow {
+  stroke: #fafafa;
+}
+
 .slider-buttons .swiper-button-prev svg,
 .slider-buttons .swiper-button-next svg {
   width: 32px;
