@@ -60,6 +60,9 @@
 }
 
 /* ---------- */
+.header-open-icon {
+  stroke: #fafafa;
+}
 
 .mob-menu {
   width: 100%;
