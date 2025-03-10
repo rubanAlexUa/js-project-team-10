@@ -9,6 +9,10 @@
   padding-bottom: 32px;
 }
 
+.container-narrow {
+  padding: 0 16px;
+}
+
 .hero-title {
   font-weight: 500;
   /* font-size: 90px; */
