@@ -6,9 +6,11 @@ const accordion = new Accordion(container, {
     showMultiple: true,
     onOpen: (currEl) => {
         toggleFaqIcon(currEl, true);
+        // addGap(currEl, true); 
     },
     onClose: (currEl) => {
         toggleFaqIcon(currEl, false);
+        // addGap(currEl, false); 
     }
 });
 
@@ -24,3 +26,39 @@ function toggleFaqIcon(element, isOpen) {
   <path d="M15 7.5L10 12.5L5 7.5" stroke="#FAFAFA" stroke-width="2" />
 </svg>`;
 }
+
+const itemElement = document.querySelector('.item');
+if (itemElement) {
+    itemElement.classList.add('is-active');
+}
+// } else {
+//     itemElement.classList.remove('is-active');
+//     itemElement.classList.add('js-enabled');
+// }
+
+
+
+// function addGap(element, isOpen) {
+//     const itemElements = document.querySelectorAll('.item');  // Використовуємо querySelectorAll
+//     itemElements.forEach(itemElement => {  // Проходимо по кожному елементу
+//         if (isOpen) {
+//             itemElement.classList.add('is-active');
+//             adjustGap(itemElement, true); 
+//         } else {
+//             itemElement.classList.remove('is-active');
+//             adjustGap(itemElement, false);
+//         }
+//     });
+// }
+
+// function adjustGap(itemElement, isOpen) {
+//     if (isOpen) {
+//         const screenWidth = window.innerWidth;
+//         const gap = screenWidth > 768 ? '26px' : '16px';
+//         itemElement.style.transition = 'none'; // Забираємо затримку анімації
+//         itemElement.style.gap = gap; 
+//     } else {
+//         itemElement.style.transition = 'none';
+//         itemElement.style.gap = '';
+//     }
+// }

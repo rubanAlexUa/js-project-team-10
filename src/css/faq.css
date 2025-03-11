@@ -21,55 +21,47 @@
 .faq-header {
     font-weight: 600;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
     letter-spacing: -0.02em;
     color: rgba(250, 250, 250, 0.4);
     margin-bottom: 32px;
     cursor: pointer;
 }
 
-.q-container {
-    /* display: flex;
-    flex-direction: column;
-    width: 100%; */
-}
-
-.item {
+.container-list  .item {
     border: none;
     border-bottom: 1px solid rgba(250, 250, 250, 0.2);
     background-color: #1C1D20;
     display: flex;
     flex-direction: column;
-    gap: 16px;
     padding-top: 20px;
     padding-bottom: 20px;
 }
-.item:first-child {
+.container-list .item.is-active {
+    gap: 16px;
+}
+.container-list .item:first-child {
     border-top: 1px solid rgba(250, 250, 250, 0.2);
 }
 
-.item-header {
-    margin: 0;
-    padding: 0;
-}
-
-.question {
+.item .item-header .question {
     font-weight: 600;
     font-size: 20px;
     line-height: 1.5;
     letter-spacing: -0.02em;
     color: #FAFAFA;
-    width: 289px;
+    width: 85%;
     cursor: pointer;
     background-color: transparent;
     transition: color 0.25s ease;
     position: relative;
     text-decoration: none;
 }
-/* .question::after {
+
+.item .item-header .question::after {
     content: none;
     display: none;
-} */
+}
 
 .faq-svg {
     transform: translate(150%, -50%);
@@ -86,55 +78,47 @@
     align-items: center;
 }
 
-.text-div {
+.faq .container-list .item .text-div {
     overflow: hidden;
     transition-property: height, visibility;
     transition-timing-function: ease;
 } 
 
-.text {
+.faq .container-list .item .text-div .text {
     font: "Arial", sans-serif;
     color: rgba(250, 250, 250, 0.6);
-    margin-bottom: 20px;
-}
-
-.text-div.js-enabled {
-    visibility: hidden;
-}
-
-.text-div.is-active {
-    visibility: visible;
 }
 
 @media only screen and (min-width: 768px) {
     .faq {
         margin-bottom: 48px;
         margin-top: 48px;
-        max-width: 704px;
+        max-width: 768px;
         padding: 0 32px 96px 32px;
     }
 
-    .item {
-        padding-top: 42px;
+    .container-list  .item {
+        padding-top: 32px;
+        padding-bottom: 42px;
+    }
+    .container-list  .item.is-active {
+        gap: 26px;
+        padding-bottom: 24px;
+    }
+    .container-list  .item:last-child {
         padding-bottom: 32px;
     }
 
-    .question {
-        width: 574px;
-        /* min-height: 104px; */
-        padding: 0;
+    .item .item-header .question {
+        width: 90%;
     }
-    
+
     .faq-svg {
-        transform: translate(200%, -50%);
+        transform: translate(190%, -50%);
     }
-    .text-div {
+    .faq .item .text-div {
         margin-right: 30px;
     }
-    
-    .text-div .is-active{
-        margin-top: 32px;
-    } 
 }
 
 @media only screen and (min-width: 1440px) { 
@@ -145,57 +129,49 @@
         padding: 0 32px 164px 32px;
     }
 
-    .q-container {
+    .container-list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-    
-    .item {
+
+    .container-list  .item {
         order: 0;
-        padding: 0;
-        padding-top: 42px;
-        padding-bottom: 32px;
     }
-    .item:first-child {
+    .container-list  .item:first-child {
         border-top: 1px solid rgba(250, 250, 250, 0.2);
     }
-    .item:nth-child(1) {
+    .container-list  .item:nth-child(1) {
         order: 0;
         border-right: 1px solid rgba(250, 250, 250, 0.2);
     }
-    .item:nth-child(2) {
+    .container-list  .item:nth-child(2) {
         order: 2;
         border-right: 1px solid rgba(250, 250, 250, 0.2);
     }
-    .item:nth-child(3) {
+    .container-list  .item:nth-child(3) {
         order: 3;
         border-right: 1px solid rgba(250, 250, 250, 0.2);
     }
-    .item:nth-child(4) {
+    .container-list  .item:nth-child(4) {
         order: 1;
         padding-left: 32px;
         border-top: 1px solid rgba(250, 250, 250, 0.2);
     }
-    .item:nth-child(5) {
+    .container-list  .item:nth-child(5) {
         order: 2;
         padding-left: 32px;
     }
-    .item:nth-child(6) {
+    .container-list  .item:nth-child(6) {
         order: 4;
         padding-left: 32px;
     }
+    
+    .item .item-header .question {
+        width: 92%;
+        padding: 0;
+    }
 
-    .item-header {
-        margin: 0;
-        padding: 0;
-    }
-    
-    .question {
-        width: 574px;
-        padding: 0;
-    }
-    
     .faq-svg {
-        transform: translate(150%, -50%);
+        transform: translate(120%, -50%);
     }
 }
