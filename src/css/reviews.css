@@ -80,7 +80,6 @@ padding: 32px 16px;
 
     .swiper-button-prev,
     .swiper-button-next {
-        color: #333;
         background-color: transparent;
         border-radius: 50%;
         width: 40px;
@@ -99,16 +98,22 @@ padding: 32px 16px;
         font-weight: bold;
         display: none;
       }
-      
-      .swiper-rtl .swiper-button-next svg,
-      .swiper-rtl .swiper-button-prev svg {
-        display: none;
-       }
+      .swiper-button-next svg, 
+      .swiper-button-prev svg {
+        width: 32px !important;
+      }
       
       .swiper-button-disabled {
         opacity: 0.5;
         cursor: not-allowed;
       }
+      .arrow-left,
+      .arrow-right{
+        stroke: #fafafa;
+        width: 8px;
+        height: 8px;
+      }
+     
   .swiper-button{
     display: flex;
     justify-content: center;
@@ -146,6 +151,7 @@ padding: 32px 16px;
         width: 68px;
         height: 68px;
     }
+  
 }
 @media only screen and (min-width: 1440px){
     .reviews {
