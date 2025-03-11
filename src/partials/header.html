@@ -3,7 +3,8 @@
     <div class="header-logo">
       <a class="header-logo" href="">
         <img
-          src="../img/image-logo.jpg"
+          srcset="../img/image.webp 1x, ../img/image-2x.webp 2x"
+          src="../img/image.webp"
           alt="Logo"
           width="80"
           height="80"
@@ -11,7 +12,17 @@
         />jefferson*
       </a>
     </div>
-    <nav>
+
+    <a class="header-menu" >Menu</a>
+    <nav class="header-nav-list" hidden>
+      <ul>
+        <li><a href="#about-me">About me</a></li>
+        <li><a href="#benefits">Benefits</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <!-- <nav>
       <a class="header-menu" href="">Menu</a>
       <ul class="header-nav-list visually-hidden">
         <li><a href="#about-me">About me</a></li>
@@ -19,22 +30,23 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
-    </nav>
+    </nav> -->
     <a href="#work-together" class="header-anchor-link">Order the project</a>
-    <button type="button" class="menu-open-btn">
+
+   <button type="button" class="menu-open-btn">
       <svg class="header-open-icon" width="28" height="28">
         <use href="../img/symbol-defs.svg#icon-menu"></use>
       </svg>
     </button>
   </div>
-  <div class="mob-menu">
+  <div class="mobile-menu hidden">
     <div>
-      <button type="button" class="mob-menu-close">
-        <svg class="header-open-icon" width="28" height="28">
-          <use href="../img/symbol-defs.svg#icon-close-btn"></use>
-        </svg>
-      </button>
       <nav>
+        <button type="button" class="mob-menu-close">
+          <svg class="header-open-icon" width="28" height="28">
+            <use href="../img/symbol-defs.svg#icon-close-btn"></use>
+          </svg>
+        </button>
         <ul class="mob-nav-list">
           <li class="mob-menu-item">
             <a class="mob-menu-link" href="#about-me">About me</a>
@@ -49,8 +61,8 @@
             <a class="mob-menu-link" href="#faq">FAQ</a>
           </li>
         </ul>
-      </nav>
     </div>
     <a href="#work-together" class="mob-anchor-link">Order the project</a>
   </div>
+  </nav>
 </header>

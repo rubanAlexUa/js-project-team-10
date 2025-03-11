@@ -1,6 +1,6 @@
 .header {
   position: absolute;
-  top: 0;
+  /* top: 0; */
   width: 100%;
   padding-top: 32px;
   background-color: transparent;
@@ -22,16 +22,9 @@
 
 .header-img {
   border-radius: 18px;
-  width: 80px;
-  height: 80px;
+  /* width: 80px;
+  height: 80px; */
 }
-
-/* .text-logo {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  letter-spacing: -0.02em;
-} */
 
 .header-menu {
   display: none;
@@ -44,14 +37,6 @@
   display: none;
 }
 
-.menu-icon-btn {
-  fill: #fafafa;
-}
-
-.menu-icon-btn {
-  fill: black;
-}
-
 .menu-open-btn {
   /* display: block; */
   width: 28px;
@@ -60,50 +45,55 @@
   border: none;
 }
 
-/* ---------- */
 .header-open-icon {
   stroke: #fafafa;
 }
 
-.mob-menu {
+.mobile-menu {
   width: 100%;
   height: 100%;
   position: fixed;
   top: 0;
   background-color: #1c1d20;
-  background-image: url(../img/mob-menu.png);
+  background-image: url(../img/mob-menu.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   padding: 32px 16px 64px 16px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  transition: transform 300ms ease;
   overflow: auto;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
 }
 
-.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+@media screen and (min-resolution: 192dpi) {
+  .hero {
+    background-image: url(../img/mob-menu-2x.webp);
+  }
+}
+
+.hidden {
+  transform: translateX(100%);
 }
 
 .mob-menu-close {
   display: block;
-  margin-left: auto;
-  margin-bottom: 228px;
+  position: absolute;
+  top: 32px;
+  right: 16px;
   background-color: transparent;
   border: none;
 }
 
 .mob-nav-list {
+  margin-top: 302px;
 }
 
 .mob-menu-item {
   margin-bottom: 12px;
+  text-align: center;
 }
 
 .mob-menu-item:not(:last-child) {
@@ -119,6 +109,10 @@
   color: #fafafa;
 }
 
+.mob-menu-link:hover {
+  color: #ed3b44;
+}
+
 .mob-anchor-link {
   display: flex;
   border-radius: 60px;
@@ -129,7 +123,7 @@
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
-  /* margin-top: auto; */
+  margin-top: auto;
 }
 
 @media only screen and (min-width: 768px) {
@@ -141,6 +135,9 @@
     text-decoration: underline;
     text-decoration-skip-ink: none;
     padding: 10px;
+    background-color: transparent;
+    border: none;
+    color: #fafafa;
   }
 
   .header-anchor-link {
