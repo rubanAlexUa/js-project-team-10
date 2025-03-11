@@ -1,7 +1,20 @@
+const menuLink = document.querySelector('.header-menu-btn');
+const navMenu = document.querySelector('.nav-menu');
 const openMenuBtn = document.querySelector('.menu-open-btn');
 const closeMenuBtn = document.querySelector('.mob-menu-close');
 const mobileMenu = document.querySelector('.mobile-menu');
 const menuLinks = document.querySelector('.mob-menu-link');
+
+menuLink.addEventListener('click', e => {
+  e.preventDefault();
+  navMenu.classList.toggle('show');
+});
+
+document.addEventListener('click', e => {
+  if (!menuLink.contains(e.target) && !navMenu.contains(e.target)) {
+    navMenu.classList.remove('show');
+  }
+});
 
 function toggleMenu() {
   mobileMenu.classList.toggle('hidden');
