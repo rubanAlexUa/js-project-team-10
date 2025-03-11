@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sources":["../src/js/projects.js"],"sourcesContent":["const swiper = new Swiper('.swiper', {\n  slidesPerView: 1,\n  spaceBetween: 20,\n  breakpointBase: window,\n\n  navigation: {\n    nextEl: '.swiper-button-next',\n    prevEl: '.swiper-button-prev',\n  },\n});\n"],"names":[],"mappings":"0uBAAe,IAAI,OAAO,UAAW,CACnC,cAAe,EACf,aAAc,GACd,eAAgB,OAEhB,WAAY,CACV,OAAQ,sBACR,OAAQ,qBACT,CACH,CAAC"}
+{"version":3,"file":"index.js","sources":[],"sourcesContent":[],"names":[],"mappings":""}
