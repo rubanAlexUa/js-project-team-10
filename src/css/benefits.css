@@ -1,0 +1,100 @@
+/* Styles for Mobile devices */
+.container {
+    min-width: 320px;
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 0 16px 64px 16px;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 704px;
+        padding: 0 32px 96px 32px;
+    }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+    .container {
+        max-width: 1376px;
+        padding: 0 32px 164px 32px;
+    }
+}
+
+
+
+
+.title-benefits {
+font-family: "Inter Tight", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: rgba(250, 250, 250, 0.4);
+    margin-left: 32px;
+    margin: 0;
+}
+.benefits-container {
+    display: flex;
+
+}
+.benefits-group-ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+}
+.benefits-block-group {
+    background: #242527;
+    border-radius: 20px;
+    padding: 24px;
+    width: 332px;
+    height: 270px;
+}
+
+.icon-benefits-div {
+    border-radius: 10px;
+    width: 48px;
+    height: 48px;
+    background: #ed3b44;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 64px;
+}
+.subtitle-benefits {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: #fafafa;
+    margin-bottom: 8px;
+}
+.benefits-paragraph-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: rgba(250, 250, 250, 0.6);
+    margin: 5px 0 0;
+    width: 284px;
+}
+
+
+
+.order-button {
+    border: 1px solid rgba(250, 250, 250, 0.2);
+        border-radius: 60px;
+        padding: 18px 36px;
+        width: 187px;
+        height: 55px;
+}
+
+.order-button:hover {
+    background: #d84b4b;
+    color: white;
+}
+
+/* still to do */
