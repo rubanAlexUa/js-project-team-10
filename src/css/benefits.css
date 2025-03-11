@@ -34,6 +34,11 @@
   margin-bottom: 64px;
 }
 
+.icon-benefits {
+  stroke: #fafafa;
+  fill: transparent;
+}
+
 .subtitle-benefits {
   font-weight: 600;
   font-size: 20px;
