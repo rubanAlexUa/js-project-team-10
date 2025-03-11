@@ -1,0 +1,152 @@
+img {
+    display: block;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    width: 100%;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+/* кінець загальних налаштувань */
+
+.covers-container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    height: 508px;
+
+    background-image: url(../img/covers-img/img-x1/covers-bg-x1.png);
+    background-size: 1108px 784px;
+    width: 375px;
+    background-repeat: no-repeat;
+    background-position: -450px center;
+    position: relative;
+    background-color: #1c1d20;
+    overflow: hidden;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx),
+(min-resolution: 192dpi) {
+    .covers-container {
+        background-image: url(../img/covers-img/img-x2/covers-bg-x2.png);
+    }
+}
+
+.marquee {
+    position: absolute;
+    right: -800px;
+    left: 0;
+    /* bottom: -20px; */
+    overflow: hidden;
+}
+
+.marquee__inner {
+    height: 200px;
+    display: flex;
+    transform: rotate(16deg);
+}
+
+.marquee__line {
+        flex-shrink: 0;
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: calc(100% / 10);
+        width: 282px;
+        height: 162px;
+        object-fit: contain;
+
+        /* Анімація "туди-сюди" */
+        animation-name: marqueeLine;
+        animation-duration: 20s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        /* Рух вперед і назад */
+    }
+
+        @keyframes marqueeLine {
+            from {
+                transform: translateX(-20%);
+                /* Початок руху */
+            }
+    
+            to {
+                transform: translateX(-180%);
+                /* Кінець руху */
+            }
+        }
+ 
+@media screen and (min-width: 768px) {
+.covers-container{
+    height: 960px;
+    width: 768px;
+}
+
+.covers__img{
+    width: 544px;
+    height: 314px;
+}
+
+.marquee__inner {
+    height: 360px;
+}
+
+        .marquee__line {
+            width: calc(100% / 10);
+        }
+
+}
+
+ @media screen and (min-width: 1440px) {
+
+.covers-container {
+        height: 960px;
+        width: 1440px;
+    }
+
+    .marquee__line{
+            width: calc(100% / 10);
+    }
+
+    .covers__img {
+        width: 544px;
+        height: 314px;
+    }
+
+    .marquee__inner {
+        height: 360px;
+    }
+}  
