@@ -28,16 +28,11 @@
   display: none;
 }
 
-.header-nav-list {
-}
-
 .header-anchor-link {
   display: none;
 }
 
 .menu-open-btn {
-  /* display: block; */
-  width: 28px;
   height: 28px;
   background-color: transparent;
   border: none;
