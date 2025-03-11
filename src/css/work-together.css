@@ -220,10 +220,16 @@
   padding: 0;
   border: none;
   background-color: #1c1d20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-close-icon {
+  width: 22px;
+  height: 22px;
   stroke: #fafafa;
+  fill: #fafafa;
 }
 
 .modal-titel {
