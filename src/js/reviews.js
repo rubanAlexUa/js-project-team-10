@@ -24,48 +24,57 @@ async function fetchReviews() {
     }
 }
 
-function initSwiper() {
-   new Swiper('.swiper', {
-       slidesPerView: 1, 
-        spaceBetween: 20, 
-        loop: false, 
-        allowSlideNext: true,
-        allowSlidePrev: true,
-        navigation: {
-            nextEl: '.swiper-button-next', 
-            prevEl:  '.swiper-button-prev', 
-        },
-       
-        keyboard: {
-            enabled: true, 
-            onlyInViewport: true,
-        },
-        mousewheel: true,
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
-            },
-            1440: {
-                slidesPerView: 4, 
-            },
-        } 
-    });
-}
 
-function renderReviews(reviews) {
+    function renderReviews(reviews) {
     reviewsList.innerHTML = reviews
-        .map(review =>
-            `<li class="swiper-slide" data-id="${review._id}>
-                <img src="${review.avatar_url}" alt="${review.author}" class="review-avatar"></img> 
-            <h4 class="slide-title">${review.author}</h4>
-                <p class="slide-text">${review.review}</p>
-            </li>`
-        )
-        .join('');
-    initSwiper(); 
-}
+          .map(review => `
+            <li class="swiper-slide">
+              <img src="${review.avatar_url}" alt="${review.author}" class="review-avatar">
+              <h4 class="slide-title">${review.author}</h4>
+              <p class="slide-text">${review.review}</p>
+            </li>`)
+          .join('');
+          setTimeout(() =>{
+            initSwiper();
+          }, 0);
+         }
+      
+      function initSwiper() {
+        if (!nexBtn || !prevBtn) {
+            console.error("Swiper navigation buttons not found!");
+            return;
+        }
+       new Swiper('.swiper', {
+           slidesPerView: 1, 
+            spaceBetween: 20, 
+            loop: false, 
+            allowSlideNext: true,
+            allowSlidePrev: true,
+            navigation: {
+                nextEl: nexBtn, 
+                prevEl: prevBtn  },
+           
+                keyboard: {
+                    enabled: true, 
+                    onlyInViewport: true,
+                },
+                mousewheel: true,
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1440: {
+                        slidesPerView: 4, 
+                    },
+                } 
+            });
+        }
 
-document.addEventListener('DOMContentLoaded', fetchReviews);
+
+document.addEventListener('DOMContentLoaded', fetchReviews); 
+    
+
+
 
 
 
