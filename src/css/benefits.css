@@ -1,0 +1,120 @@
+.title-benefits {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+  margin-bottom: 32px;
+}
+
+.benefits-block-group {
+  background: #242527;
+  border-radius: 20px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.benefits-group-ul {
+  gap: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.icon-benefits-div {
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  background: #ed3b44;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64px;
+}
+
+.icon-benefits {
+  stroke: #fafafa;
+  fill: transparent;
+}
+
+.subtitle-benefits {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  margin-bottom: 8px;
+}
+
+.benefits-paragraph-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+}
+
+.benefits-additional-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.order-button {
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  width: 187px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-top: 32px;
+}
+.order-button:hover {
+  background: #d84b4b;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .benefits-main-content {
+    width: 100%;
+  }
+  .benefits-additional-container {
+    flex-direction: column;
+  }
+  .benefits-group-ul {
+    flex-flow: row wrap;
+  }
+  .benefits-block-group {
+    width: calc((100% - 32px) / 2);
+  }
+  .order-button {
+    margin-top: 64px;
+  }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+  .benefits-main-content {
+    width: 50%;
+  }
+
+  .benefits-additional-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .title-benefits {
+    white-space: nowrap;
+    width: 50%;
+  }
+  .order-button {
+    margin-top: 64px;
+  }
+}
