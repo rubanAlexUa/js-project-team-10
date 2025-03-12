@@ -12,8 +12,6 @@
 }
 
 .about-me {
-    margin-top: 32px;
-    margin-bottom: 32px;
     display: flex;
     align-items: center;
 }
@@ -89,7 +87,14 @@
     color: #FAFAFA;
     padding: 0 0 32px 0;
 
+}.accordion-container .ac .ac-panel .ac-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;     
 }
+
+
 
 .accordion-container .ac.is-active>.ac-header .ac-icon-open {
     text-align: center;
