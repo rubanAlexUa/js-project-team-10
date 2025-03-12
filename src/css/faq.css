@@ -1,11 +1,11 @@
-.ac,
-.ac .ac-header,
-.ac-header,
-.ac .ac-panel,
-.ac .ac-trigger,
-.ac .ac-trigger::after,
-.accordion-container,
-.ac .ac-panel .ac-text {
+.faq .ac,
+.faq .ac .ac-header,
+.faq .ac-header,
+.faq .ac .ac-panel,
+.faq .ac .ac-trigger,
+.faq .ac .ac-trigger::after,
+.faq .accordion-container,
+.faq .ac .ac-panel .ac-text {
     all: unset;
 }
 
