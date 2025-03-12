@@ -32,13 +32,6 @@
   display: none;
 }
 
-.visibility {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
-  position: fixed;
-}
-
 .menu-open-btn {
   height: 28px;
   background-color: transparent;
@@ -128,6 +121,13 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .visibility {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    position: fixed;
+  }
+
   .header-menu {
     display: flex;
     font-weight: 500;
@@ -167,6 +167,11 @@
     background-color: transparent;
     padding: 10px 15px;
     text-align: center;
+
+    /* ----------- */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   .nav-menu-item {
@@ -185,8 +190,10 @@
     color: #e0373f;
   }
 
-  .nav-menu.show {
-    display: block;
+  .nav-menu.visibility {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .header-anchor-link {
