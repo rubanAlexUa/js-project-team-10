@@ -30,7 +30,6 @@
     padding: 32px 32px 272px 32px;
     border-radius: 24px;
     width: 343px;
-    max-height: 500px;
     background-color: #242527;
     margin-bottom: 16px;
 }
@@ -61,8 +60,6 @@
 .about-me-img {
     border-radius: 24px;
     width: 100%;
-    height: auto;
-    height: 500px;
 }
 
 .accordion-container .ac .ac-header {
@@ -91,7 +88,7 @@
     letter-spacing: -0.02em;
     color: #FAFAFA;
     padding: 0 0 32px 0;
-    
+
 }
 
 .accordion-container .ac.is-active>.ac-header .ac-icon-open {
@@ -135,11 +132,13 @@
 }
 
 .accordion-container .ac .ac-trigger .ac-icon-open {
-    fill: #FAFAFA;
+    fill: transparent;
+    stroke: #FAFAFA;
 }
 
 .accordion-container .ac .ac-trigger .ac-icon-close {
-    fill: #FAFAFA;
+    fill: transparent;
+    stroke: #FAFAFA;
     display: none;
 }
 
@@ -159,34 +158,34 @@
     position: relative;
 }
 
-.swiper-wrap {
+.swiper-block .swiper-wrap {
     width: 100%;
     max-width: 260px;
 }
 
-.swiper {
+.swiper-block .swiper {
     width: 100%;
     height: 130px;
     margin-top: 32px;
 }
 
-.swiper-element {
+.swiper-block .swiper-element {
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 100%;
     fill: var(--button-text);
     border: 1px solid rgba(250, 250, 250, 0.2);
-    width: 130px;
+    /* width: 130px; */
     height: 130px;
 }
 
-.swiper-element.ss-active {
+.swiper-block .swiper-element.ss-active {
     border-radius: 100%;
     background: #ED3B44;
 }
 
-.swiper-list {
+.swiper-block .swiper-list {
     font-family: "Inter Tight", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -239,22 +238,22 @@
         height: 700px;
     }
 
-    .swiper-wrap {
+    .swiper-block .swiper-wrap {
         width: 100%;
         max-width: 600px;
     }
 
-    .swiper {
+    .swiper-block .swiper {
         height: 200px;
         margin-top: 64px;
     }
 
-    .swiper-element {
+    .swiper-block .swiper-element {
         width: 200px;
         height: 200px;
     }
 
-    .swiper-list {
+    .swiper-block .swiper-list {
         font-size: 20px;
 
     }
@@ -266,7 +265,7 @@
 
     .swiper-button {
         width: 40px;
-        height: 40px;        
+        height: 40px;
     }
 }
 
@@ -298,12 +297,20 @@
         padding-left: 696px;
     }
 
-    .swiper-wrap {
-        width: 100%;
-        max-width: 1200px;
+    .swiper-block {
+        margin-top: 96px;
+        padding-right: 144px;
+        padding-left: 32px;
+
     }
 
-    .swiper {
-        margin-top: 96px;
+    .swiper-block .swiper-wrap {
+        width: 100%;
+        max-width: 1200px;
+
+    }
+
+    .swiper-button {
+        right: 32px;
     }
 }
