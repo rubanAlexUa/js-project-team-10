@@ -8,6 +8,7 @@
   margin: 0 auto;
   margin-bottom: 96px;
   padding-top: 281px;
+  position: relative;
 }
 
 @media screen and (min-resolution: 192dpi) {
