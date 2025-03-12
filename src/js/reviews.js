@@ -44,7 +44,7 @@ function initSwiper() {
     console.error('Swiper navigation buttons not found!');
     return;
   }
-  const swiperFirst = new Swiper('.swiper-1', {
+  const swiperFirst = new Swiper('.test', {
     slidesPerView: 1,
     spaceBetween: 16,
     loop: false,
