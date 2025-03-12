@@ -6,7 +6,7 @@
 .faq .ac .ac-trigger::after,
 .faq .accordion-container,
 .faq .ac .ac-panel .ac-text {
-  all: unset;
+    all: unset;
 }
 
 .faq {
