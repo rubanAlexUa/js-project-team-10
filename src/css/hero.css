@@ -7,7 +7,7 @@
   background-position-x: 39%;
   margin: 0 auto;
   margin-bottom: 96px;
-  padding: 281px 0 32px;
+  padding-top: 281px;
 }
 
 @media screen and (min-resolution: 192dpi) {
@@ -17,7 +17,7 @@
 }
 
 .container-narrow {
-  padding: 0 16px;
+  padding-bottom: 32px;
 }
 
 .hero-title {
@@ -70,7 +70,7 @@
 
 @media only screen and (min-width: 768px) {
   .hero {
-    padding: 300px 0 32px;
+    padding-top: 300px;
   }
   .hero-title {
     font-size: 90px;
