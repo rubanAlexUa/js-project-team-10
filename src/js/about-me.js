@@ -18,11 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+
+
    document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.mySwiper').forEach((swiperElement, index) => {
         new Swiper(swiperElement, {
             loop: true,
-            
+            grabCursor: true,
+            simulateTouch: true,
+            touchRatio: 1,
             breakpoints: {
                 320: { slidesPerView: 2 },
                 375: { slidesPerView: 2 },
@@ -32,10 +36,16 @@ document.addEventListener("DOMContentLoaded", () => {
             navigation: {
                 nextEl: `.swiper-button-next`, 
             },
+            mousewheel: true,
+            speed: 500,
             keyboard: {
                 enabled: true,
                 onlyInViewport: true,
             },
         });
     });
-});
+   });
+
+      
+     
+      
