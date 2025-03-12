@@ -44,7 +44,6 @@ ul {
     margin-left: auto;
     margin-right: auto;
     height: 508px;
-
     background-image: url(../img/covers-img/img-x1/covers-bg-x1.png);
     background-size: 1108px 784px;
     width: 375px;
@@ -53,6 +52,7 @@ ul {
     position: relative;
     background-color: #1c1d20;
     overflow: hidden;
+    background-attachment: fixed;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2),
@@ -65,50 +65,57 @@ ul {
 
 .marquee {
     position: absolute;
-    right: -800px;
     left: 0;
-    /* bottom: -20px; */
+    top: 325px;
     overflow: hidden;
+
+    /* Анімація "туди-сюди" */
+    animation-name: marquee;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+}
+
+@keyframes marquee {
+    from {
+    transform:rotate(16deg) translateX(0);
+    /* Початок руху */
+}
+        
+    to {
+    transform:rotate(16deg) translateX(-75%);
+    /* Кінець руху */
+}
 }
 
 .marquee__inner {
-    height: 200px;
     display: flex;
-    transform: rotate(16deg);
+    margin-bottom: 35px;
 }
 
 .marquee__line {
-        flex-shrink: 0;
-        margin-right: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    flex-shrink: 0;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit: contain;       
+} 
+
+.covers__img {
+    width: 100%;
+    max-height: 162px;
+}
+
+@media screen and (max-width: 767px) {
+    .marquee__line {
         width: calc(100% / 10);
         width: 282px;
         height: 162px;
-        object-fit: contain;
-
-        /* Анімація "туди-сюди" */
-        animation-name: marqueeLine;
-        animation-duration: 20s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        /* Рух вперед і назад */
     }
+}
 
-        @keyframes marqueeLine {
-            from {
-                transform: translateX(-20%);
-                /* Початок руху */
-            }
-    
-            to {
-                transform: translateX(-180%);
-                /* Кінець руху */
-            }
-        }
- 
 @media screen and (min-width: 768px) {
 .covers-container{
     height: 960px;
@@ -116,17 +123,21 @@ ul {
 }
 
 .covers__img{
-    width: 544px;
-    height: 314px;
+    width: 100%;
+    max-height: 330px;
 }
 
-.marquee__inner {
-    height: 360px;
+.marquee{
+    right: -5000px;
+    top: 600px;
 }
 
-        .marquee__line {
-            width: calc(100% / 10);
-        }
+.covers-container {
+        padding: 0;
+            height: 960px;
+            background-size: 1288px 1004px;
+            background-position: -400px -200px;
+}
 
 }
 
@@ -137,16 +148,11 @@ ul {
         width: 1440px;
     }
 
-    .marquee__line{
-            width: calc(100% / 10);
-    }
+.covers-container {
 
-    .covers__img {
-        width: 544px;
-        height: 314px;
-    }
+        background-size: 1528px 1064px;
+            background-position: center center;
+            max-width: 100%;
+}
 
-    .marquee__inner {
-        height: 360px;
-    }
-}  
+}    
