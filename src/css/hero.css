@@ -32,7 +32,10 @@
 
 .hero-nav {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-list {
