@@ -85,15 +85,15 @@
   background-color: #242527;
 }
 
-.slider-buttons {
+.swiper-2 .slider-buttons {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
 }
 
-.slider-buttons .swiper-button-prev,
-.slider-buttons .swiper-button-next {
+.swiper-2 .slider-buttons .swiper-button-prev,
+.swiper-2 .slider-buttons .swiper-button-next {
   position: static !important;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.5);
@@ -104,8 +104,8 @@
   margin-top: 32px;
 }
 
-.slider-buttons .swiper-button-prev::after,
-.slider-buttons .swiper-button-next::after {
+.swiper-2 .slider-buttons .swiper-button-prev::after,
+.swiper-2 .slider-buttons .swiper-button-next::after {
   content: none;
 }
 
@@ -113,14 +113,14 @@
   stroke: #fafafa;
 }
 
-.slider-buttons .swiper-button-prev svg,
-.slider-buttons .swiper-button-next svg {
+.swiper-2 .slider-buttons .swiper-button-prev svg,
+.swiper-2 .slider-buttons .swiper-button-next svg {
   width: 32px;
   height: 32px;
 }
 
-.slider-buttons .swiper-button-prev.swiper-button-disabled,
-.slider-buttons .swiper-button-next.swiper-button-disabled {
+.swiper-2 .slider-buttons .swiper-button-prev.swiper-button-disabled,
+.swiper-2 .slider-buttons .swiper-button-next.swiper-button-disabled {
   border-color: rgba(255, 255, 255, 0.2);
   color: rgba(255, 255, 255, 0.2);
   stroke: #3b3b3b;
@@ -170,8 +170,8 @@
     border-bottom-right-radius: 24px;
   }
 
-  .slider-buttons .swiper-button-prev,
-  .slider-buttons .swiper-button-next {
+  .swiper-2 .slider-buttons .swiper-button-prev,
+  .swiper-2 .slider-buttons .swiper-button-next {
     margin-top: 64px;
   }
 }
