@@ -229,6 +229,7 @@
   width: 22px;
   height: 22px;
   stroke: #fafafa;
+  fill: #fafafa;
 }
 
 .modal-titel {
@@ -292,8 +293,6 @@
     border-radius: 24px;
     width: 70px;
     height: 70px;
-    margin-top: 80px;
-    margin-left: 16px;
   }
 
   .footer-titel {
