@@ -6,3 +6,5 @@ const accordion = new Accordion(container, {
     showMultiple: true,
     duration: 400,
 });
+
+
