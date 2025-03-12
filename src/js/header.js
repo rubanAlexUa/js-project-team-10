@@ -3,7 +3,7 @@ const navMenu = document.querySelector('.nav-menu');
 const openMenuBtn = document.querySelector('.menu-open-btn');
 const closeMenuBtn = document.querySelector('.mob-menu-close');
 const mobileMenu = document.querySelector('.mobile-menu');
-const menuLinks = document.querySelector('.mob-menu-link');
+const menuLinks = document.querySelectorAll('.mob-menu-link');
 
 menuLink.addEventListener('click', e => {
   e.preventDefault();
