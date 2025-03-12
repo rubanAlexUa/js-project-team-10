@@ -7,12 +7,12 @@ const menuLinks = document.querySelector('.mob-menu-link');
 
 menuLink.addEventListener('click', e => {
   e.preventDefault();
-  navMenu.classList.toggle('show');
+  navMenu.classList.toggle('visibility');
 });
 
 document.addEventListener('click', e => {
   if (!menuLink.contains(e.target) && !navMenu.contains(e.target)) {
-    navMenu.classList.remove('show');
+    navMenu.classList.remove('visibility');
   }
 });
 

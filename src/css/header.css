@@ -32,6 +32,13 @@
   display: none;
 }
 
+.visibility {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  position: fixed;
+}
+
 .menu-open-btn {
   height: 28px;
   background-color: transparent;
@@ -159,7 +166,6 @@
     transform: translateX(-50%);
     background-color: transparent;
     padding: 10px 15px;
-    display: none;
     text-align: center;
   }
 
