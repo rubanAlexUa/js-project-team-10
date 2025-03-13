@@ -33,9 +33,9 @@ closeMenuBtn.addEventListener('click', toggleMenu);
 
 function smoothScroll(section) {
   const elem = document.querySelector(`#${section}`);
-  const rect = elem.firstElementChild.getBoundingClientRect();
-  window.scrollBy({
-    top: rect.height * 2,
+  console.log(elem);
+  window.scrollTo({
+    top: elem.offsetTop,
     behavior: 'smooth',
   });
 }
