@@ -1,6 +1,5 @@
 .hero {
   padding-top: 0;
-  margin-bottom: 64px;
   position: relative;
 }
 .container-narrow {
@@ -30,7 +29,7 @@
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
-  padding-bottom: 212px;
+  margin-bottom: 212px;
 }
 
 .hero-nav {
@@ -75,15 +74,12 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .hero {
-    margin-bottom: 96px;
-  }
   .container-narrow {
     padding-top: 300px;
   }
   .hero-title {
     font-size: 90px;
-    padding-bottom: 187px;
+    margin-bottom: 187px;
   }
   .hero-list {
     gap: 8px;
@@ -115,13 +111,9 @@
 }
 
 @media only screen and (min-width: 1440px) {
-  .hero {
-    margin-bottom: 164px;
-  }
-
   .hero-title {
-    padding-bottom: 243px;
     max-width: 1084px;
     margin: 0 auto;
+    margin-bottom: 243px;
   }
 }
