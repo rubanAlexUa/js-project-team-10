@@ -489,7 +489,6 @@
 
 .swiper-block .swiper-element.ss-active {
   border-radius: 100%;
-  background: #ed3b44;
 }
 
 .swiper-block .swiper-list {
@@ -499,6 +498,11 @@
   letter-spacing: -0.02em;
   color: #fafafa;
   text-align: center;
+}
+
+.swiper-block .swiper-wrap .swiper .swiper-wrapper .swiper-slide-active {
+  border-radius: 100%;
+  background-color: #ed3b44;
 }
 
 .sw-icon-v {
@@ -592,6 +596,7 @@
     flex-wrap: nowrap;
     flex-direction: column;
     padding-left: 696px;
+    padding-right: 68px;
   }
 
   .swiper-block {

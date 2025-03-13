@@ -20,7 +20,7 @@
 }
 
 .project-info {
-  padding: 22px 32px;
+  padding: 32px;
   background-color: #fafafa;
 }
 
@@ -129,7 +129,7 @@
 
 @media (min-width: 768px) {
   .project-info {
-    padding: 64px 130px 64px 64px;
+    padding: 64px;
   }
   .tags {
     width: 100%;
