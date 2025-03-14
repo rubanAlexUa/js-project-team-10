@@ -200,11 +200,11 @@ ul {
 
 @keyframes marquee {
   from {
-    transform: rotate(16deg) translateX(0);
+    transform: rotate(16deg) translateX(-5%);
   }
 
   to {
-    transform: rotate(16deg) translateX(-75%);
+    transform: rotate(16deg) translateX(-70%);
   }
 }
 

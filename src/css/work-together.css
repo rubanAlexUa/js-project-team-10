@@ -1,3 +1,4 @@
+
 .footer {
   background-image: image-set(
     url(/img/work-together/glass-effect-mob-1x.png) 1x,
@@ -8,6 +9,27 @@
   margin-top: 32px;
   padding-top: 32px;
   padding-bottom: 32px;
+.container-footer {
+}
+
+.footer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  margin-left: 295px;
+}
+
+.footer-background-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
 }
 
 .footer-titel-block {
@@ -47,12 +69,16 @@
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 64px;
+  }
+.form-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-imput {
   border: none;
   width: 100%;
-  height: 44px;
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
@@ -63,6 +89,8 @@
   outline: none;
   padding-bottom: 20px;
   cursor: pointer;
+  z-index: 10;
+  padding-bottom: 20px;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -74,10 +102,11 @@
 
 .email {
   margin-bottom: 16px;
+  margin-right: 32px;
 }
 
 .text {
-  margin-bottom: 32px;
+  margin-right: 32px;
 }
 
 .footer-button {
@@ -91,6 +120,8 @@
   color: #fafafa;
   background-color: #ed3b44;
   border: none;
+  margin-bottom: 63px;
+  padding: 0;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -250,6 +281,11 @@
     margin-top: 48px;
     padding-top: 80px;
     padding-bottom: 169px;
+  .container-footer {
+  }
+
+  .footer-background {
+    margin-left: 570px;
   }
 
   .footer-titel-block {
@@ -280,6 +316,10 @@
     height: 44px;
     margin-right: 32px;
     margin-bottom: 0;
+  }
+
+  .contact-imput {
+    width: 245px;
   }
 
   .footer-button {
@@ -348,6 +388,8 @@
     margin-top: 82px;
     padding-left: 196px;
     padding-right: 196px;
+@media screen and (min-width: 1440px) {
+  .container-footer {
   }
 
   .footer-background {
@@ -364,5 +406,18 @@
 
   .text {
     margin-right: 86px;
+  }
+  .contact-imput {
+    width: 390px;
+  }
+  .text {
+    margin-right: 86px;
+  }
+  .footer-button {
+    margin: 0;
+  }
+
+  .footer-address-email {
+    margin-left: 180px;
   }
 }
