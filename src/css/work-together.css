@@ -1,9 +1,10 @@
 .container-footer {
   position: relative;
-  max-width: 375px;
   height: 100%;
   overflow: hidden;
+  margin-top: 32px;
   padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .footer-background {
@@ -30,10 +31,11 @@
   display: flex;
   align-items: baseline;
   gap: 8px;
+  margin-bottom: 64px;
 }
 
 .title-second {
-  margin-left: -52px;
+  padding-left: -52px;
 }
 
 .footer-picture {
@@ -51,11 +53,17 @@
   line-height: 100%;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  margin-top: 32px;
 }
 
 .titel-red {
   color: #ed3b44;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 64px;
 }
 
 .contact-imput {
@@ -71,6 +79,7 @@
   background: transparent;
   outline: none;
   z-index: 10;
+  padding-bottom: 20px;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -81,7 +90,7 @@
 }
 
 .email {
-  margin-top: 63px;
+  margin-bottom: 16px;
 }
 
 .text {
@@ -99,7 +108,6 @@
   color: #fafafa;
   background-color: #ed3b44;
   border: none;
-  margin-bottom: 63px;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -109,12 +117,12 @@
   background-color: #e0373f;
 }
 
-.footer-address-list {
+.footer-contact-list {
   display: flex;
   align-items: flex-start;
 }
 
-.footer-address-email {
+.footer-contact-email {
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
   text-align: center;
@@ -129,7 +137,7 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-address-link {
+.footer-contact-link {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -138,7 +146,7 @@
   justify-content: center;
 }
 
-.footer-address-tel {
+.footer-contact-tel {
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 60px;
   width: 118px;
@@ -152,7 +160,7 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-address-tel-link {
+.footer-contact-tel-link {
   font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -163,10 +171,10 @@
   z-index: 10;
 }
 
-.footer-address-email:hover,
-.footer-address-email:focus,
-.footer-address-tel:hover,
-.footer-address-tel:focus {
+.footer-contact-email:hover,
+.footer-contact-email:focus,
+.footer-contact-tel:hover,
+.footer-contact-tel:focus {
   border-color: #fafafa;
 }
 
@@ -229,7 +237,6 @@
   width: 22px;
   height: 22px;
   stroke: #fafafa;
-  fill: #fafafa;
 }
 
 .modal-titel {
@@ -253,32 +260,13 @@
 
 @media screen and (min-width: 768px) {
   .container-footer {
-    max-width: 768px;
-    padding-top: 48px;
+    margin-top: 48px;
+    padding-top: 80px;
+    padding-bottom: 169px;
   }
 
   .footer-background {
     margin-left: 570px;
-  }
-
-  .footer-button {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-    font-family: 'Inter Tight', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: -0.02em;
-    color: #fafafa;
-    background-color: #ed3b44;
-    border: none;
-    z-index: 10;
-    transition: background-color 0.3s ease;
-
-    margin-bottom: 63px;
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .footer-titel-block {
@@ -297,58 +285,50 @@
 
   .footer-titel {
     font-size: 64px;
-    margin-top: 88px;
+  }
+
+  .footer-form {
+    flex-direction: row;
+    align-items: center;
   }
 
   .contact-imput {
-    margin-left: 16px;
-    margin-bottom: 78px;
     width: 245px;
-  }
-
-  .email {
-    margin-top: 64px;
-  }
-
-  .text {
-    margin-bottom: 32px;
+    height: 44px;
+    margin-right: 32px;
+    margin-bottom: 0;
   }
 
   .footer-button {
     width: 150px;
     height: 150px;
-    margin-left: 32px;
     margin-bottom: 0;
   }
 
-  .footer-address {
-    margin-top: 78px;
-  }
-
-  .footer-address-list {
+  .footer-contact-list {
     display: flex;
     align-items: flex-start;
     gap: 0px;
   }
 
-  .footer-address-email {
+  .footer-contact-email {
     width: 239px;
     height: 55px;
     margin-left: 16px;
     margin-right: 8px;
   }
 
-  .footer-address-link {
+  .footer-contact-link {
     padding: 18px 32px;
     font-size: 16px;
   }
 
-  .footer-address-tel {
+  .footer-contact-tel {
     width: 173px;
     height: 55px;
   }
 
-  .footer-address-tel-link {
+  .footer-contact-tel-link {
     padding: 18px 32px;
     font-size: 16px;
   }
@@ -376,8 +356,9 @@
 
 @media screen and (min-width: 1280px) {
   .container-footer {
-    max-width: 1440px;
-    padding-top: 82px;
+    margin-top: 82px;
+    padding-left: 196px;
+    padding-right: 196px;
   }
 
   .footer-background {
@@ -386,27 +367,13 @@
 
   .footer-picture {
     margin-top: 85px;
-    margin-left: 180px;
   }
 
   .contact-imput {
     width: 390px;
   }
 
-  .email {
-    margin-left: 180px;
-  }
-
   .text {
-    margin-bottom: 78px;
     margin-right: 86px;
-  }
-
-  .footer-button {
-    margin: 0;
-  }
-
-  .footer-address-email {
-    margin-left: 180px;
   }
 }
