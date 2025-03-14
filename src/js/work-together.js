@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let message = document.createElement('p');
   message.classList.add('email-validation-message');
   message.style.textAlign = 'left';
-  footerContact.parentNode.insertBefore(message, footerContact);
+  form.insertAdjacentElement('beforeend', message);
 
   function showValidationMessage(isValid) {
     if (isValid) {
