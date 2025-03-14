@@ -69,12 +69,6 @@
   letter-spacing: -0.02em;
 }
 
-.project-link {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
 .see-project-btn:hover,
 .see-project-btn:focus {
   background-color: #e0373f;

@@ -5,7 +5,8 @@ const closeMenuBtn = document.querySelector('.mob-menu-close');
 const mobileMenu = document.querySelector('.mobile-menu');
 const menuLinks = document.querySelectorAll('.mob-menu-link');
 const navElements = document.querySelectorAll('.nav-menu-item');
-
+const orderProject = document.querySelector('.header-anchor-link');
+const mobOrderProject = document.querySelector('.mob-anchor-link');
 menuLink.addEventListener('click', e => {
   e.preventDefault();
   navMenu.classList.toggle('visibility');
@@ -49,5 +50,24 @@ menuLinks.forEach(link => {
 navElements.forEach(navElement => {
   navElement.addEventListener('click', () => {
     smoothScroll(navElement.firstElementChild.dataset.id);
+  });
+});
+
+orderProject.addEventListener('click', () => {
+  const elem = document.querySelector(`.${orderProject.dataset.id}`);
+  console.log(elem);
+  window.scrollTo({
+    top: elem.offsetTop,
+    behavior: 'smooth',
+  });
+});
+
+mobOrderProject.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+  const elem = document.querySelector(`.${orderProject.dataset.id}`);
+  console.log(elem);
+  window.scrollTo({
+    top: elem.offsetTop,
+    behavior: 'smooth',
   });
 });
