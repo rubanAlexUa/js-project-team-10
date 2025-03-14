@@ -3,12 +3,13 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
 document.addEventListener('DOMContentLoaded', function () {
-  const form = document.querySelector('.form-contact');
+  const form = document.querySelector('.footer-form');
   const emailInput = document.getElementById('user-email');
   const commentInput = document.getElementById('user-comments');
   const modal = document.querySelector('.backdrop');
   const closeModalBtn = document.querySelector('.modal-close');
   const overlay = document.querySelector('.backdrop');
+  const footerContact = document.querySelector('.footer-contact');
 
   modal.classList.remove('is-open');
 
@@ -19,7 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   let message = document.createElement('p');
   message.classList.add('email-validation-message');
-  emailInput.parentNode.appendChild(message);
+  message.style.textAlign = 'left';
+  footerContact.parentNode.insertBefore(message, footerContact);
 
   function showValidationMessage(isValid) {
     if (isValid) {
@@ -30,15 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
       emailInput.style.borderBottom = '1px solid #e74a3b';
       message.textContent = 'Invalid email, try again';
       message.style.color = '#e74a3b';
-    }
-
-    message.style.marginTop = '4px';
-    message.style.position = 'relative';
-
-    if (window.innerWidth >= 768) {
-      message.style.marginLeft = '190px';
-    } else {
-      message.style.marginLeft = '0';
     }
   }
 
@@ -80,13 +73,18 @@ document.addEventListener('DOMContentLoaded', function () {
   form.addEventListener('submit', async function (event) {
     event.preventDefault();
 
+    if (!isValidEmail(emailInput.value.trim())) {
+      showValidationMessage(false);
+      return;
+    }
+
     const formData = {
       email: emailInput.value,
       comment: commentInput.value,
     };
 
     try {
-      const response = await axios.post(
+      await axios.post(
         'https://portfolio-js.b.goit.study/api/requests',
         formData,
         {
@@ -98,6 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       toggleModal(true);
       form.reset();
+      message.textContent = '';
     } catch (error) {
       let errorMessage =
         'Error sending application. Please check the entered data and try again.';
