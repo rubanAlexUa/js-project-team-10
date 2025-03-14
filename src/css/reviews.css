@@ -39,17 +39,15 @@
   position: relative;
 }
 
-.swiper-1.swiper-slide {
-  min-height: 100%;
-}
-
-.swiper-1.swiper-slide {
+.swiper-1 .swiper-wrapper .swiper-1.swiper-slide {
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
   background-color: transparent;
   padding: 32px 24px;
+  height: auto;
+  min-height: 100%;
 }
 .review-avatar {
   width: 48px;
