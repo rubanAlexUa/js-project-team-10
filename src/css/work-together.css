@@ -6,18 +6,6 @@
   background-repeat: no-repeat;
   background-position: right;
 }
-.container-footer {
-}
-
-.footer-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  margin-left: 295px;
-}
 
 .footer-background-card {
   position: absolute;
@@ -272,17 +260,11 @@
 @media screen and (min-width: 768px) {
   .footer {
     background-image: image-set(
-      url(/img/work-together/elements-des-1x.png) 1x,
-      url(/img/work-together/elements-des-2x.png) 2x
+      url(/img/work-together/glass-effect-tab-1x.png) 1x,
+      url(/img/work-together/glass-effect-tab-2x.png) 2x
     );
     background-repeat: no-repeat;
     background-position: right;
-  }
-  .container-footer {
-  }
-
-  .footer-background {
-    margin-left: 570px;
   }
 
   .footer-titel-block {
@@ -374,31 +356,29 @@
 @media screen and (min-width: 1440px) {
   .footer {
     background-image: image-set(
-      url(/img/work-together/glass-effect-mob-1x.png) 1x,
-      url(/img/work-together/glass-effect-mob-2x.png) 2x
+      url(/img/work-together/elements-des-1x.png) 1x,
+      url(/img/work-together/elements-des-2x.png) 2x
     );
     background-repeat: no-repeat;
     background-position: right;
   }
-  .container-footer {
-  }
-
-  .footer-background {
-    margin-left: 1050px;
-  }
 
   .contact-imput {
     width: 390px;
   }
+
   .email {
     margin-right: 32px;
   }
+
   .text {
     margin-right: 86px;
   }
+
   .contact-imput {
     width: 390px;
   }
+
   .footer-button {
     margin: 0;
   }
